@@ -1,0 +1,15 @@
+input_file = input("Geben Sie den Namen der Eingabedatei ein: ")
+start_phrase = input("Geben Sie die Startphrase zum Kopieren ein: ")
+end_phrase = input("Geben Sie die Endphrase zum Kopieren ein: ")
+output_file = input("Geben Sie den Namen der Ausgabedatei ein: ")
+
+with open(input_file, 'r') as f_in:
+    with open(output_file, 'w') as f_out:
+        write = False  # Schalter zum Schreiben aktivieren/deaktivieren
+        for line in f_in:
+            if start_phrase in line:
+                write = True  # Schalter zum Schreiben aktivieren
+            elif end_phrase in line:
+                write = False  # Schalter zum Schreiben deaktivieren
+            elif write:
+                f_out.write(line)  # Zeile in die Ausgabedatei schreiben
