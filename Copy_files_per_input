@@ -1,0 +1,20 @@
+import re
+
+#Insert file, string to search for and output file
+filename = input("Gib den Dateinamen des Dokuments ein: ")
+search_string = input("Gib den Suchstring ein: ")
+output_file = input("Gib den Namen der Ausgabedatei ein: ")
+
+#open and read file
+with open(filename, "r") as f:
+    data = f.read()
+
+#use regular expressions to search for the string
+#results = re.findall(f'\([^)]*?{search_string }[^(]*?\)', data)
+
+#export into file
+with open('output_file ','w') as file:
+    #file.write(f' {search_string }\n'.join(re.findall(f'\([^)]*?{search_string }[^(]*?\)', data)))
+    file.write(f' \n'.join(re.findall(f'\([^)]*?{search_string }[^(]*?\)', data)))
+
+    file.write(f' {search_string }')
