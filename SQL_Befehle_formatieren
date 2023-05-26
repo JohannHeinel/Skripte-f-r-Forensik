@@ -1,0 +1,19 @@
+input_file_name = input("Bitte geben Sie den Namen der Eingabedatei ein: \n")
+output_file_name = input("Bitte geben Sie den Namen der Ausgabedatei ein: \n")
+separator = input("Bitte geben Sie den Trennoperator ein: \n")
+
+#Eingabtedatei mit Leserechten öffnen
+with open(input_file_name, 'r') as input_file:
+
+    #Ausgabedatei mit Schreibrechten öffnen
+    with open(output_file_name, 'w') as output_file:
+
+        # Schleife um durch das Dokument zu iterieren
+        for line in input_file:
+
+            #Trennoperator
+            parts = line.split(separator)
+
+            #Trennoperator -> Neue Zeile
+            for part in parts:
+                output_file.write(part.strip() + '\n')
