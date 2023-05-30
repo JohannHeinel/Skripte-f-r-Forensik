@@ -1,5 +1,10 @@
 # Skripte-f-r-Forensik
 Skripte für Forensik
+
+Die beiliegenden Skripte wurden bei der Untersuchung eines SQL-Dumps verwendet. Sie dienten um Daten aus dem Dump zu extrahieren, da dieser zu groß war für normale Editoren. Weiterhin sollten mittels Regulärer Ausdrücke Informationen leserlich zusammengefasst werden und auchformatiert werden.
+
+
+
 SQL-Befehle_Formatieren
 
 Dieses Skript öffnet eine Eingabedatei, eine Ausgabedatei und liest jede Zeile der Eingabedatei. Jede Zeile wird mit einem angegebenen Trennoperator in separate Teile aufgeteilt, und dann werden die Teile in die Ausgabedatei geschrieben. Jeder Teil wird dabei in einer neuen Zeile der Ausgabedatei geschrieben.
